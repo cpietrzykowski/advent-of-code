@@ -1,0 +1,9 @@
+version: "3"
+
+services:
+  go:
+    image: golang
+    volumes:
+      - ../:/aoc
+    env_file:
+      - .env
