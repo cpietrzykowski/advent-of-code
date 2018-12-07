@@ -1,0 +1,22 @@
+package main
+
+import (
+	"bufio"
+	inputs "go/common"
+	"log"
+	"os"
+	"path/filepath"
+)
+
+func main() {
+	inputspath := filepath.Join(inputs.ModulePath(), "../../inputs/data/02/input.txt")
+	if file, error := os.Open(inputspath); error == nil {
+		defer file.Close()
+		scanner := bufio.NewScanner(file)
+
+		for scanner.Scan() {
+		}
+	} else {
+		log.Println(error)
+	}
+}
