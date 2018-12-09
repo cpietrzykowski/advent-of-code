@@ -1,18 +1,17 @@
 package main
 
 import (
+	"aoc/common"
 	"bufio"
 	"fmt"
-	inputs "go/common"
 	"log"
-	"os"
-	"path/filepath"
 	"strconv"
 )
 
 func main() {
-	inputspath := filepath.Join(inputs.ModulePath(), "../../inputs/data/01/input.txt")
-	if file, error := os.Open(inputspath); error == nil {
+	const day = 1
+	const part = 1
+	if file, error := common.AOCInputFile(day); error == nil {
 		defer file.Close()
 		scanner := bufio.NewScanner(file)
 

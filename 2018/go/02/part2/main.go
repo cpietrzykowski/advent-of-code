@@ -1,18 +1,17 @@
 package main
 
 import (
+	"aoc/common"
 	"fmt"
-	inputs "go/common"
 	"log"
-	"os"
-	"path/filepath"
 )
 
 func main() {
-	inputspath := filepath.Join(inputs.ModulePath(), "../../inputs/data/02/input.txt")
-	if file, error := os.Open(inputspath); error == nil {
+	const day = 2
+	const part = 2
+	if file, error := common.AOCInputFile(day); error == nil {
 		defer file.Close()
-		if lines := inputs.ReadLines(file); error == nil {
+		if lines := common.ReadLines(file); error == nil {
 			common := findCommon(lines)
 			log.Println(string(common))
 		}

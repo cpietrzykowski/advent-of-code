@@ -1,17 +1,17 @@
 package main
 
 import (
+	"aoc/common"
 	"bufio"
 	"fmt"
-	inputs "go/common"
 	"log"
 	"os"
-	"path/filepath"
 )
 
 func main() {
-	inputspath := filepath.Join(inputs.ModulePath(), "../../inputs/data/02/input.txt")
-	if file, error := os.Open(inputspath); error == nil {
+	const day = 2
+	const part = 1
+	if file, error := common.AOCInputFile(day); error == nil {
 		defer file.Close()
 		fmt.Println(checksum(file))
 	} else {

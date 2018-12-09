@@ -1,19 +1,19 @@
 package main
 
 import (
+	"aoc/common"
 	"bufio"
 	"errors"
 	"fmt"
-	inputs "go/common"
 	"log"
 	"os"
-	"path/filepath"
 	"strconv"
 )
 
 func main() {
-	inputspath := filepath.Join(inputs.ModulePath(), "../../inputs/data/01/input.txt")
-	if file, error := os.Open(inputspath); error == nil {
+	const day = 1
+	const part = 2
+	if file, error := common.AOCInputFile(day); error == nil {
 		defer file.Close()
 		if freq, error := calibrate(file); error == nil {
 			fmt.Println(freq)

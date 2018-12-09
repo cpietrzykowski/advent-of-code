@@ -1,20 +1,9 @@
-package inputs
+package common
 
 import (
 	"bufio"
 	"os"
-	"path"
-	"runtime"
 )
-
-// ModulePath gets the "run" (caller) command directory
-func ModulePath() string {
-	if _, file, _, ok := runtime.Caller(0); ok {
-		return path.Dir(file)
-	}
-
-	return ""
-}
 
 // ReadLines is a convenience for reading a file into an array of strings
 func ReadLines(file *os.File) []string {
