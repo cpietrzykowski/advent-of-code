@@ -79,7 +79,6 @@ func overlappingClaims(file *os.File) int {
 }
 
 func makeClaim(entry string) (*Claim, error) {
-	// #12 @ 269,129: 25x14
 	re := regexp.MustCompile(`#(\d+)\s*@\s*(\d+),(\d+):\s+(\d+)x(\d+)`)
 	fields := re.FindAllStringSubmatch(entry, -1)
 

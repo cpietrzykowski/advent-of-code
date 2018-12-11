@@ -2,9 +2,7 @@
 
 # Inputs
 
-You can either create the inputs manually (copying into /aoc/[year]/inputs/data/[day]/input.txt) or automatically by running (I've saved my configuration into a .env file for docker-compose, you can specify the variables in your own shell, at prompt, or passing literals); this will only make a request if the input exists:
-
-    docker-compose run go sh -c 'cd /aoc/go && go run cmd/inputs.go --base-url $AOC_BASEURL $AOC_SESSIONID'
+Inputs are created automagically from the function common.AOCInputFile([day]) (returns *os.File), call this at the start of the main function for the aoc part.
 
 # Running (using docker)
 
