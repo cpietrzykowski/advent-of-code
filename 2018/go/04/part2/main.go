@@ -14,7 +14,7 @@ import (
 )
 
 const day = 4
-const part = 1
+const part = 2
 
 func init() {
 	log.SetFlags(log.LstdFlags | log.Lshortfile)
